@@ -7,7 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'My Web Application',
+	'name'=>'ZerogreyNews',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -34,9 +34,9 @@ return array(
 	'components'=>array(
             'twitter' => array(
                 'class' => 'ext.yiitwitteroauth.YiiTwitter',
-                'consumer_key' => 'xvz1evFS4wEEPTGEFPHBog',
-                'consumer_secret' => 'L8qq9PZyRg6ieKGEKhZolGC0vJWLw8iEJ88DRdyOg',
-                'callback' => 'http://localhost/Zerogrey/index.php?r=twitter/twitterCallBack',
+                'consumer_key' => 'NJCsskbCCvKeKktoJ5Mhr6kAt',
+                'consumer_secret' => 'ib7ktINJTv3f1rYAAD02iJibiqEnN2k5bH57SWY9eUv86CikOH',
+                'callback' => 'http://importlogistica.co/Zerogrey/index.php?r=twitter/twitterCallBack',
             ),
 		'user'=>array(
 			// enable cookie-based authentication
@@ -92,5 +92,6 @@ return array(
 	'params'=>array(
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
+                'homeUrl' => Yii::app()->createAbsoluteUrl('index')
 	),
 );
