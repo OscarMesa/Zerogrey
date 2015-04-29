@@ -92,6 +92,6 @@ return array(
 	'params'=>array(
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
-                'homeUrl' => Yii::app()->createAbsoluteUrl('index')
+                'homeUrl' => 'index'
 	),
 );
