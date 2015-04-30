@@ -240,3 +240,16 @@ Stack trace:
 #22 {main}
 REQUEST_URI=/Zerogrey/index.php?r=twitter/news
 ---
+2015/04/30 02:12:03 [error] [php] Undefined index: oauth_token (C:\xampp\htdocs\Zerogrey\protected\extensions\yiitwitteroauth\twitteroauth.php:121)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): TwitterController->runAction()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): TwitterController->runActionWithFilters()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): TwitterController->run()
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Zerogrey\index.php(13): CWebApplication->run()
+REQUEST_URI=/Zerogrey/index.php?r=twitter/twitterCallBack&oauth_token=3RR7tciENPnTbuZUVkg9UxUgC7iFbwTJ&oauth_verifier=85R86z0gZKnyQbAdGzek04M707fpo8ig
+in C:\xampp\htdocs\Zerogrey\protected\extensions\yiitwitteroauth\twitteroauth.php (121)
+in C:\xampp\htdocs\Zerogrey\protected\controllers\TwitterController.php (29)
+in C:\xampp\htdocs\Zerogrey\index.php (13)

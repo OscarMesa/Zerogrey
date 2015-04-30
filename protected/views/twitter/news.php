@@ -9,17 +9,15 @@
             </tr>
         </thead>
 <?php
-echo '<pre>';
-foreach ($tweets->statuses as $t) {
-    echo "<tr>";
-    echo "<td>".$t->id_str."</td>";
-    echo "<td>".$t->source."</td>";
-    echo "<td>".$t->user->screen_name."</td>";
-    echo "<td>".$t->user->location."</td>";
-    echo "<td>".$t->text."</td>";
-    echo "</tr>";
-}
-
+        foreach ($tweets->statuses as $t) {
+            echo "<tr>";
+            echo "<td>".$t->id_str."</td>";
+            echo "<td>".$t->source."</td>";
+            echo "<td>".$t->user->screen_name."</td>";
+            echo "<td>".$t->user->location."</td>";
+            echo "<td>".$t->text."</td>";
+            echo "</tr>";
+        }
 ?>
 </table>
 <script type="text/javascript">

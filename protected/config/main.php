@@ -61,7 +61,7 @@ return array(
 			'connectionString' => 'mysql:host=localhost;dbname=zerogrey',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => 'root',
+			'password' => '',
 			'charset' => 'utf8',
 		),
 		
