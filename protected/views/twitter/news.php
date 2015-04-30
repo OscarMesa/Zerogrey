@@ -8,26 +8,25 @@
                 <th>Descripción</th>
             </tr>
         </thead>
-<?php
-echo '<pre>';
-foreach ($tweets->statuses as $t) {
-    echo "<tr>";
-    echo "<td>".$t->id_str."</td>";
-    echo "<td>".$t->source."</td>";
-    echo "<td>".$t->user->screen_name."</td>";
-    echo "<td>".$t->user->location."</td>";
-    echo "<td>".$t->text."</td>";
-    echo "</tr>";
-}
-
-?>
+        <tfoot>
+            <tr>
+                <th>Id</th>
+                <th>Fuente</th>
+                <th>Usuario</th>
+                <th>Ubicacón</th>
+                <th>Descripción</th>
+            </tr>
+        </tfoot>
 </table>
 <script type="text/javascript">
     $(document).ready(function(){
          $('#example').dataTable( {
-        "scrollY":        "200px",
+        "scrollY":        "500px",
         "scrollCollapse": true,
-        "paging":         false
+        "paging":         false,
+        "processing": true,
+        "serverSide": true,
+        "ajax": "<?php echo Yii::app()->createAbsoluteUrl('twitter/getDataByAjax');?>"
     } );
     });
 </script>

@@ -9,10 +9,17 @@ class TwitterController extends Controller {
         $this->render('news',array('tweets'=>$this->getTweets()));
         
     }
+    
+    public function actionGetDataByAjax()
+    {
+        print_r($_REQUEST);die;
+        $this->page = $_REQUEST['draw'];
+        $data = $this->getTweets($_REQUEST['draw']['value']);
+    }
 
-    public function getTweets(){
+    public function getTweets($search=""){
         $t = Yii::app()->twitter->getTwitterTokened(Yii::app()->session['token']['oauth_token'], Yii::app()->session['token']['oauth_token_secret']);
-        $r= $t->get('search/tweets', array("q" => "%noticia%","lang"=>'es','since_id'=>  $this->page ,'count'=>$this->amount));
+        $r= $t->get('search/tweets', array("q" => "%".$search."%","lang"=>'es','since_id'=>  $this->page ,'count'=>$this->amount));
         return $r;
     }
     public function actionTwitterCallBack() {
