@@ -17,7 +17,7 @@ return array(
 		'application.models.*',
 		'application.components.*',
 	),
-
+    
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
 		
@@ -34,9 +34,9 @@ return array(
 	'components'=>array(
             'twitter' => array(
                 'class' => 'ext.yiitwitteroauth.YiiTwitter',
-                'consumer_key' => 'NJCsskbCCvKeKktoJ5Mhr6kAt',
-                'consumer_secret' => 'ib7ktINJTv3f1rYAAD02iJibiqEnN2k5bH57SWY9eUv86CikOH',
-                'callback' => 'http://importlogistica.co/Zerogrey/index.php?r=twitter/twitterCallBack',
+                'consumer_key' => 'vqb7fYBtp7e3p8fHOUXe1e7gA',
+                'consumer_secret' => '2J9H2eQLzPgeHg9qiy2wTjU90WsAww1SJaD1ZUd6N59JDwsIEC',
+                'callback' => 'http://127.0.0.1/Zerogrey/index.php?r=twitter/twitterCallBack',
             ),
 		'user'=>array(
 			// enable cookie-based authentication
@@ -57,15 +57,14 @@ return array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 		),
 		// uncomment the following to use a MySQL database
-		/*
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=testdrive',
+			'connectionString' => 'mysql:host=localhost;dbname=zerogrey',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => '',
+			'password' => 'root',
 			'charset' => 'utf8',
 		),
-		*/
+		
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
 			'errorAction'=>'site/error',

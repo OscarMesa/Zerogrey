@@ -86,16 +86,25 @@ class SiteController extends Controller
 			Yii::app()->end();
 		}
 
-		// collect user input data
+		if(Yii::app()->user->isGuest){
+                    // collect user input data
 		if(isset($_POST['LoginForm']))
 		{
-			$model->attributes=$_POST['LoginForm'];
-			// validate user input and redirect to the previous page if valid
-			if($model->validate() && $model->login())
-				$this->redirect(Yii::app()->user->returnUrl);
+                    $model->attributes = $_POST['LoginForm'];
+			if(AccountUser::model()->count('user = ? AND password = ?',array($_POST['LoginForm']['username'],  sha1($_POST['LoginForm']['password'])))>0)
+			{
+                            $duracion = $_POST['LoginForm']['rememberMe'] ? (3600*24*30) : 0;
+                            Yii::app()->user->login(new UserIdentity($_POST['LoginForm']['username'],$_POST['LoginForm']['password']),$duracion);
+                            $this->redirect(Yii::app()->createAbsoluteUrl('twitter'));
+                        }else{
+                            $model->addError('password','La contraseña o usuario no son válidos.');
+                        }
 		}
 		// display the login form
 		$this->render('login',array('model'=>$model));
+                }else{
+                	$this->redirect(Yii::app()->createAbsoluteUrl('twitter/news'));
+                }
 	}
 
 	/**

@@ -14,3 +14,229 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/Zerogrey/index.php?r=gii
 ---
+2015/04/29 12:33:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "twitter".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('twitter')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('twitter')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('twitter/twitter')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Zerogrey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Zerogrey/index.php?r=twitter/twitter
+---
+2015/04/29 19:34:33 [error] [exception.CException] exception 'CException' with message 'Alias "ext.yiitwitteroauth.YiiTwitter" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\xampp\htdocs\yii\framework\YiiBase.php:322
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\YiiBase.php(196): YiiBase::import('ext.yiitwittero...', true)
+#1 C:\xampp\htdocs\yii\framework\base\CModule.php(386): YiiBase::createComponent(Array)
+#2 C:\xampp\htdocs\yii\framework\base\CModule.php(103): CModule->getComponent('twitter')
+#3 C:\xampp\htdocs\Zerogrey\protected\controllers\TwitterController.php(14): CModule->__get('twitter')
+#4 C:\xampp\htdocs\Zerogrey\protected\controllers\TwitterController.php(9): TwitterController->getTweets()
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): TwitterController->actionNews()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('news')
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('twitter/news')
+#11 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\Zerogrey\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/Zerogrey/index.php?r=twitter/news
+---
+2015/04/29 19:49:49 [error] [exception.Exception] exception 'Exception' with message 'Invalid Bootstrap path and CDN URL not set. Set vendor.twbs.bootstrap.dist alias or cdnUrl parameter in the configuration file.' in C:\xampp\htdocs\Zerogrey\protected\extensions\bootstrap\components\TbApi.php:245
+Stack trace:
+#0 C:\xampp\htdocs\Zerogrey\protected\extensions\bootstrap\components\TbApi.php(75): TbApi->getBootstrapUrl()
+#1 C:\xampp\htdocs\Zerogrey\protected\extensions\bootstrap\components\TbApi.php(122): TbApi->registerCoreCss()
+#2 C:\xampp\htdocs\Zerogrey\protected\extensions\bootstrap\components\TbApi.php(167): TbApi->registerAllCss()
+#3 C:\xampp\htdocs\Zerogrey\protected\views\layouts\main.php(17): TbApi->register()
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#8 C:\xampp\htdocs\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#9 C:\xampp\htdocs\yii\framework\web\CBaseController.php(206): COutputProcessor->run()
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 C:\xampp\htdocs\Zerogrey\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#12 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#15 C:\xampp\htdocs\Zerogrey\protected\controllers\TwitterController.php(9): CController->render('news', Array)
+#16 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): TwitterController->actionNews()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('news')
+#21 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('twitter/news')
+#22 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\Zerogrey\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/Zerogrey/index.php?r=twitter/news
+---
+2015/04/29 19:54:20 [error] [exception.Exception] exception 'Exception' with message 'Invalid Bootstrap path and CDN URL not set. Set vendor.twbs.bootstrap.dist alias or cdnUrl parameter in the configuration file.' in C:\xampp\htdocs\Zerogrey\protected\extensions\bootstrap\components\TbApi.php:245
+Stack trace:
+#0 C:\xampp\htdocs\Zerogrey\protected\extensions\bootstrap\components\TbApi.php(75): TbApi->getBootstrapUrl()
+#1 C:\xampp\htdocs\Zerogrey\protected\extensions\bootstrap\components\TbApi.php(122): TbApi->registerCoreCss()
+#2 C:\xampp\htdocs\Zerogrey\protected\extensions\bootstrap\components\TbApi.php(167): TbApi->registerAllCss()
+#3 C:\xampp\htdocs\Zerogrey\protected\views\layouts\main.php(17): TbApi->register()
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#8 C:\xampp\htdocs\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#9 C:\xampp\htdocs\yii\framework\web\CBaseController.php(206): COutputProcessor->run()
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 C:\xampp\htdocs\Zerogrey\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#12 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#15 C:\xampp\htdocs\Zerogrey\protected\controllers\TwitterController.php(9): CController->render('news', Array)
+#16 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): TwitterController->actionNews()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('news')
+#21 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('twitter/news')
+#22 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\Zerogrey\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/Zerogrey/index.php?r=twitter/news
+---
+2015/04/29 20:00:34 [error] [exception.CException] exception 'CException' with message 'Alias "" is invalid. Make sure it points to an existing directory or file.' in C:\xampp\htdocs\yii\framework\YiiBase.php:295
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\YiiBase.php(196): YiiBase::import('\\TbApi', true)
+#1 C:\xampp\htdocs\yii\framework\base\CModule.php(386): YiiBase::createComponent(Array)
+#2 C:\xampp\htdocs\yii\framework\base\CModule.php(103): CModule->getComponent('bootstrap')
+#3 C:\xampp\htdocs\Zerogrey\protected\views\layouts\main.php(17): CModule->__get('bootstrap')
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#8 C:\xampp\htdocs\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#9 C:\xampp\htdocs\yii\framework\web\CBaseController.php(206): COutputProcessor->run()
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 C:\xampp\htdocs\Zerogrey\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#12 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#15 C:\xampp\htdocs\Zerogrey\protected\controllers\TwitterController.php(9): CController->render('news', Array)
+#16 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): TwitterController->actionNews()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('news')
+#21 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('twitter/news')
+#22 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\Zerogrey\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/Zerogrey/index.php?r=twitter/news
+---
+2015/04/29 20:10:37 [error] [exception.CException] exception 'CException' with message 'Object configuration must be an array containing a "class" element.' in C:\xampp\htdocs\yii\framework\YiiBase.php:193
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\base\CModule.php(386): YiiBase::createComponent(Array)
+#1 C:\xampp\htdocs\yii\framework\base\CModule.php(103): CModule->getComponent('bootstrap')
+#2 C:\xampp\htdocs\Zerogrey\protected\views\layouts\main.php(17): CModule->__get('bootstrap')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#7 C:\xampp\htdocs\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(206): COutputProcessor->run()
+#9 C:\xampp\htdocs\yii\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#10 C:\xampp\htdocs\Zerogrey\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#11 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#12 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\htdocs\Zerogrey\protected\controllers\TwitterController.php(9): CController->render('news', Array)
+#15 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): TwitterController->actionNews()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('news')
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('twitter/news')
+#21 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\Zerogrey\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/Zerogrey/index.php?r=twitter/news
+---
+2015/04/29 20:13:40 [error] [exception.CException] exception 'CException' with message 'Object configuration must be an array containing a "class" element.' in C:\xampp\htdocs\yii\framework\YiiBase.php:193
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\base\CModule.php(386): YiiBase::createComponent(Array)
+#1 C:\xampp\htdocs\yii\framework\base\CModule.php(103): CModule->getComponent('bootstrap')
+#2 C:\xampp\htdocs\Zerogrey\protected\views\layouts\main.php(17): CModule->__get('bootstrap')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#7 C:\xampp\htdocs\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(206): COutputProcessor->run()
+#9 C:\xampp\htdocs\yii\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#10 C:\xampp\htdocs\Zerogrey\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#11 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#12 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\htdocs\Zerogrey\protected\controllers\TwitterController.php(9): CController->render('news', Array)
+#15 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): TwitterController->actionNews()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('news')
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('twitter/news')
+#21 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\Zerogrey\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/Zerogrey/index.php?r=twitter/news
+---
+2015/04/29 20:14:35 [error] [exception.CException] exception 'CException' with message 'Object configuration must be an array containing a "class" element.' in C:\xampp\htdocs\yii\framework\YiiBase.php:193
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\base\CModule.php(386): YiiBase::createComponent(Array)
+#1 C:\xampp\htdocs\yii\framework\base\CModule.php(103): CModule->getComponent('bootstrap')
+#2 C:\xampp\htdocs\Zerogrey\protected\views\layouts\main.php(17): CModule->__get('bootstrap')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#7 C:\xampp\htdocs\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(206): COutputProcessor->run()
+#9 C:\xampp\htdocs\yii\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#10 C:\xampp\htdocs\Zerogrey\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#11 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#12 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\htdocs\Zerogrey\protected\controllers\TwitterController.php(9): CController->render('news', Array)
+#15 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): TwitterController->actionNews()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('news')
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('twitter/news')
+#21 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\Zerogrey\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/Zerogrey/index.php?r=twitter/news
+---
+2015/04/30 01:51:43 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.bootstrap" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\base\CModule.php(105): CComponent->__get('bootstrap')
+#1 C:\xampp\htdocs\Zerogrey\protected\views\layouts\main.php(17): CModule->__get('bootstrap')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#6 C:\xampp\htdocs\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(206): COutputProcessor->run()
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#9 C:\xampp\htdocs\Zerogrey\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\Zerogrey\protected\controllers\TwitterController.php(9): CController->render('news', Array)
+#14 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): TwitterController->actionNews()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('news')
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('twitter/news')
+#20 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\Zerogrey\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/Zerogrey/index.php?r=twitter/news
+---

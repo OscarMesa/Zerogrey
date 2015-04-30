@@ -1,7 +1,20 @@
 <?php
 
 class TwitterController extends Controller {
+    
+    public  $amount = 10;
+    public $page = 0;
+    public function actionNews()
+    {
+        $this->render('news',array('tweets'=>$this->getTweets()));
+        
+    }
 
+    public function getTweets(){
+        $t = Yii::app()->twitter->getTwitterTokened(Yii::app()->session['token']['oauth_token'], Yii::app()->session['token']['oauth_token_secret']);
+        $r= $t->get('search/tweets', array("q" => "%noticia%","lang"=>'es','since_id'=>  $this->page ,'count'=>$this->amount));
+        return $r;
+    }
     public function actionTwitterCallBack() {
 
         /* If the oauth_token is old redirect to the connect page. */
@@ -16,27 +29,31 @@ class TwitterController extends Controller {
         $access_token = $twitter->getAccessToken($_REQUEST['oauth_verifier']);
 
         /* Save the access tokens. Normally these would be saved in a database for future use. */
-        Yii::app()->session['access_token'] = $access_token;
+        Yii::app()->session['token'] = $access_token;
 
         /* Remove no longer needed request tokens */
-        unset(Yii::app()->session['oauth_token']);
-        unset(Yii::app()->session['oauth_token_secret']);
-
+//        unset(Yii::app()->session['oauth_token']);
+//        unset(Yii::app()->session['oauth_token_secret']);
+           
         if (200 == $twitter->http_code) {
             /* The user has been verified and the access tokens can be saved for future use */
             Yii::app()->session['status'] = 'verified';
 
             //get an access twitter object
             $twitter = Yii::app()->twitter->getTwitterTokened($access_token['oauth_token'], $access_token['oauth_token_secret']);
-
             //get user details
-            $twuser = $twitter->get("account/verify_credentials");
+//            $twuser = $twitter->get("account/verify_credentials");
+//            print_r($twuser);
             //get friends ids
-            $friends = $twitter->get("friends/ids");
+//            $friends = $twitter->get("friends/ids");
             //get followers ids
-            $followers = $twitter->get("followers/ids");
+//            $followers = $twitter->get("followers/ids");
             //tweet
-            $result = $twitter->post('statuses/update', array('status' => "Tweet message"));
+//            $t = $twitter->get('search/tweets', array("q" => "%ideas","lang"=>'es','screen_name'=>'yoriento'));
+//            $t = $twitter->get('statuses/user_timeline', array("q" => "%ideas","lang"=>'es','screen_name'=>'yoriento','count'=>2));
+//            echo "<pre>";
+//            print_r($t);
+            $this->redirect(Yii::app()->createAbsoluteUrl('twitter/news'));
         } else {
             /* Save HTTP status for error dialog on connnect page. */
             //header('Location: /clearsessions.php');
